@@ -10,6 +10,7 @@ quantities.
 sen_401_lab_3/
 ├── app.py
 ├── inventory.py
+├── models.py
 ├── requirements.txt
 ├── README.md
 └── utils/
@@ -18,12 +19,24 @@ sen_401_lab_3/
 ```
 
 - `inventory.py` contains the inventory records.
+- `models.py` defines the shared inventory item structure.
 - `app.py` displays the inventory and its total stock value.
 - `utils/helpers.py` contains reusable inventory calculations.
 - `requirements.txt` lists the project's dependencies.
 
-Each inventory record has an `item_name`, `quantity`, and `price`. An item's
-stock value is its quantity multiplied by its price.
+Each inventory record has an `item_name`, `quantity`, and `price`. Prices use
+Python's `Decimal` type for accurate monetary calculations. An item's stock
+value is its quantity multiplied by its price.
+
+## Maintenance Changes
+
+- **Corrective:** validates names, quantities, and prices and uses `Decimal` to
+  prevent invalid values and floating-point rounding errors.
+- **Adaptive:** adds a configurable low-stock alert as a new feature.
+- **Perfective:** improves the report heading, alignment, naira currency
+  formatting, and summary labels.
+- **Preventive:** adds shared types, type hints, docstrings, focused comments,
+  constants, and reusable validation helpers.
 
 ## Requirements
 
@@ -38,5 +51,7 @@ From the project folder, run:
 python3 app.py
 ```
 
-The application prints an inventory table, the total stock value, and the
-items with the highest and lowest quantities.
+The application prints an inventory table, the total stock value, the items
+with the highest and lowest quantities, and a low-stock alert for items with
+10 units or fewer. Change `LOW_STOCK_THRESHOLD` in `app.py` to use a different
+limit.
