@@ -1,0 +1,9 @@
+Commit: 273d938b7e30fdc7fe9c76989a8e9ccfedb4475b
+Author: Olasumbo-Eniola <olasumboeniola1@gmail.com>
+Date: 2026-07-18
+Message: Maintenance: Use Decimal types, add models, validation, and report
+
+Commit: 99f684ca131a8783b76d9d0f6ec681b875c9b55a
+Author: Olasumbo-Eniola <olasumboeniola1@gmail.com>
+Date: 2026-07-18
+Message: added inventory

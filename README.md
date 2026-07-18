@@ -51,6 +51,19 @@ From the project folder, run:
 python3 app.py
 ```
 
+## FastAPI
+
+Install dependencies and start the API:
+
+```bash
+python3 -m pip install -r requirements.txt
+uvicorn api:app --reload --port 8001
+```
+
+Open `http://localhost:8001/docs` for the interactive API documentation.
+Available routes are `GET /health`, `GET /inventory`,
+`GET /inventory/summary`, and `POST /inventory`.
+
 The application prints an inventory table, the total stock value, the items
 with the highest and lowest quantities, and a low-stock alert for items with
 10 units or fewer. Change `LOW_STOCK_THRESHOLD` in `app.py` to use a different

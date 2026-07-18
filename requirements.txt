@@ -1,2 +1,2 @@
-# This project uses only the Python standard library.
-# No third-party dependencies are required.
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
